@@ -1,0 +1,12 @@
+{
+	"name": "browser-extensions-manager",
+	"version": "1.0.0",
+	"description": "Browser extension manager UI challenge from Frontend Mentor",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"keywords": [],
+	"author": "Alexander Larin",
+	"license": "ISC"
+}
