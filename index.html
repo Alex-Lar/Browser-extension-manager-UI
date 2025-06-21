@@ -43,12 +43,8 @@
 						</defs>
 					</svg>
 				</div>
-				<button
-					class="header__theme-toggler"
-					aria-label="Toggle theme"
-					data-component=""
-				>
-					<img src="assets/images/icon-moon.svg" alt="" />
+				<button class="header__theme-toggler" aria-label="Toggle theme">
+					<img src="assets/images/icon-moon.svg" alt="Moon icon" />
 				</button>
 			</div>
 		</header>
@@ -56,27 +52,48 @@
 		<!-- Extensions -->
 		<main class="extensions">
 			<div class="extensions__inner">
-				<div class="extensions__filters">
-					<h1>Extensions List</h1>
+				<h1>Extensions List</h1>
 
-					<div data-component="filters" class="extensions__filters-group">
-						<div class="extensions__filters-item active">
-							<input type="radio" name="filter" id="filter-all" />
-							<span>All</span>
-							<label for="filter-all"></label>
-						</div>
+				<div
+					class="extensions__filters"
+					data-component="filters"
+					role="radiogroup"
+				>
+					<div class="extensions__filters-item active" aria-checked="true">
+						<input
+							type="radio"
+							name="filter"
+							id="filter-all"
+							checked
+							aria-hidden="true"
+							tabindex="-1"
+						/>
+						<span>All</span>
+						<label for="filter-all" role="radio" tabindex="0"></label>
+					</div>
 
-						<div class="extensions__filters-item">
-							<input type="radio" name="filter" id="filter-active" />
-							<span>Active</span>
-							<label for="filter-active"></label>
-						</div>
+					<div class="extensions__filters-item" aria-checked="false">
+						<input
+							type="radio"
+							name="filter"
+							id="filter-active"
+							aria-hidden="true"
+							tabindex="-1"
+						/>
+						<span>Active</span>
+						<label for="filter-active" role="radio" tabindex="0"></label>
+					</div>
 
-						<div class="extensions__filters-item">
-							<input type="radio" name="filter" id="filter-inactive" />
-							<span>Inactive</span>
-							<label for="filter-inactive"></label>
-						</div>
+					<div class="extensions__filters-item" aria-checked="false">
+						<input
+							type="radio"
+							name="filter"
+							id="filter-inactive"
+							aria-hidden="true"
+							tabindex="-1"
+						/>
+						<span>Inactive</span>
+						<label for="filter-inactive" role="radio" tabindex="0"></label>
 					</div>
 				</div>
 

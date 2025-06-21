@@ -95,7 +95,7 @@ h3 {
     justify-content: space-between;
     align-items: center;
 
-    background-color: var(--card-bg);
+    background-color: var(--neutral-0);
     padding: .5rem .7rem;
     border-radius: .5rem;
     min-width: min-content;
@@ -131,20 +131,17 @@ h3 {
 .extensions__inner {
     width: inherit;
     height: inherit;
+
+    text-align: center;
 }
 
 .extensions__filters {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-}
+    gap: 1.5rem;
 
-.extensions__filters-group {
-    display: flex;
-    gap: 1rem;
-
-
+    margin: 1.5rem auto
 }
 
 .extensions__filters-item {
