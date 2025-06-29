@@ -152,12 +152,24 @@ h3 {
     border-radius: 1.9rem;
 
     box-shadow: var(--box-shadow);
+    transition: opacity .1s ease;
 }
 
 .extensions__filters-item.active {
     background-color: var(--red-500);
     color: var(--neutral-0);
-    color: var(--neutral-0);
+}
+
+.extensions__filters-item.active:hover {
+    opacity: .8;
+}
+
+.extensions__filters-item.active:active {
+    background-color: var(--red-700);
+}
+
+.extensions__filters-item:hover {
+    opacity: .8;
 }
 
 .extensions__filters-item label {
@@ -173,6 +185,12 @@ h3 {
 .extensions__filters-item input[type="radio"] {
     visibility: hidden;
     position: absolute;
+}
+
+*:focus {
+    outline: 2px solid var(--red-700);
+    outline-offset: 2px;
+    border-radius: inherit;
 }
 
 

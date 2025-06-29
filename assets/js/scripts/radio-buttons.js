@@ -6,8 +6,8 @@ export function toggleActiveClass(component) {
 	const activeClass = "active";
 
 	for (let element of children) {
-		element.addEventListener("click", (e) => {
-			if (e.target == null) {
+		element.addEventListener("click", (event) => {
+			if (event.target == null) {
 				console.error("Event Target is missing!");
 				return;
 			}
@@ -19,15 +19,15 @@ export function toggleActiveClass(component) {
 				el.classList.remove(activeClass);
 				el.setAttribute("aria-checked", "false");
 			});
+			const parent = event.target.parentElement;
 
-            const parent = e.target.parentElement;
 			const radioBtn = parent.querySelector('input[type="radio"]');
 
-			radioBtn.setAttribute("checked", "");
-			e.target.parentElement.classList.add(activeClass);
-			e.target.parentElement.setAttribute("aria-checked", "true");
+			radioBtn.setAttribute("checked", "key");
+			event.target.parentElement.classList.add(activeClass);
+			event.target.parentElement.setAttribute("aria-checked", "true");
 
-			e.preventDefault();
+			event.preventDefault();
 		});
 	}
 }
