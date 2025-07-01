@@ -58,10 +58,12 @@
     border-radius: inherit;
 }
 
+html {
+    font-size: 18px;
+}
 
 body {
     font-family: 'Noto Sans';
-    font-size: 18px;
     background: var(--background-gradient);
     color: var(--neutral-900);
     width: 100%;
@@ -165,7 +167,7 @@ h3 {
 }
 
 .extensions__filters-item.active {
-    background-color: var(--red-500);
+    background-color: var(--red-700);
     color: var(--neutral-0);
 }
 
@@ -200,12 +202,73 @@ h3 {
 
 .extensions__list {}
 
+
+/* Extensions Card */
+
 .extensions__card {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
 
+    font-size: 1rem;
     background-color: var(--card-bg);
+    border-radius: 1rem;
+    padding: 1rem;
+    box-shadow: var(--box-shadow);
+}
+
+.extensions__card-content {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.extensions__text-group {
+    display: flex;
+    flex-direction: column;
+    gap: .3rem;
+
+    text-align: left;
+}
+
+.extensions__text-group h2 {
+    font-size: 1.2rem;
+    color: var(--neutral-900);
+    flex-grow: 1;
+}
+
+.extensions__text-group p {
+    font-size: .9rem;
+    color: var(--neutral-600);
+}
+
+.extensions__card-control {
+    display: flex;
+    justify-content: space-between;
+    min-width: 100%;
+}
+
+.extensions__card-control button {
+    font-family: inherit;
+    font-size: .8rem;
+    font-weight: 500;
+    color: var(--neutral-900);
+
+    background-color: var(--neutral-0);
+    padding: .4rem .8rem;
+    border: 1px solid var(--neutral-300);
+    border-radius: 1.9rem;
+    cursor: pointer;
+
+    transition-property: color;
+    transition-property: background-color;
+    transition-duration: .2s;
+    transition-timing-function: ease;
+}
+
+.extensions__card-control button:hover {
+    background-color: var(--red-700);
+    color: var(--neutral-0);
 }
 
 /* Custom Checkbox */
@@ -224,7 +287,10 @@ h3 {
     background-color: var(--neutral-300);
     border-radius: var(--checkbox-border-radius);
     box-shadow: inset var(--checkbox-box-shadow);
-    transition: background-color var(--checkbox-transition);
+
+    transition-property: background-color;
+    transition-property: opacity;
+    transition-timing-function: var(--checkbox-transition);
 }
 
 .custom-checkbox input {
@@ -251,6 +317,10 @@ h3 {
     transition: background-color var(--checkbox-transition);
 }
 
+.custom-checkbox:has(input:checked):hover {
+    opacity: .7;
+    transition: opacity var(--checkbox-transition);
+}
 
 .custom-checkbox label::before {
     --size: calc(var(--checkbox-height) - 2*var(--checkbox-padding));
