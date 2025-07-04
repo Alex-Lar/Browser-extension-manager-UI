@@ -55,53 +55,55 @@
 				<h1>Extensions List</h1>
 
 				<!-- Filters -->
-				<div
-					class="extensions__filters"
-					data-component="filters"
-					role="radiogroup"
-				>
-					<div class="extensions__filters-item active" aria-checked="true">
-						<input
-							type="radio"
-							name="filter"
-							id="filter-all"
-							checked
-							aria-hidden="true"
-							tabindex="-1"
-						/>
-						<span>All</span>
-						<label for="filter-all" role="radio" tabindex="0"></label>
-					</div>
+				<div class="extensions__filters">
+					<div
+						class="extensions__filters-group"
+						data-component="filters"
+						role="radiogroup"
+					>
+						<div class="extensions__filters-item active" aria-checked="true">
+							<input
+								type="radio"
+								name="filter"
+								id="filter-all"
+								checked
+								aria-hidden="true"
+								tabindex="-1"
+							/>
+							<span>All</span>
+							<label for="filter-all" role="radio" tabindex="0"></label>
+						</div>
 
-					<div class="extensions__filters-item" aria-checked="false">
-						<input
-							type="radio"
-							name="filter"
-							id="filter-active"
-							aria-hidden="true"
-							tabindex="-1"
-						/>
-						<span>Active</span>
-						<label for="filter-active" role="radio" tabindex="0"></label>
-					</div>
+						<div class="extensions__filters-item" aria-checked="false">
+							<input
+								type="radio"
+								name="filter"
+								id="filter-active"
+								aria-hidden="true"
+								tabindex="-1"
+							/>
+							<span>Active</span>
+							<label for="filter-active" role="radio" tabindex="0"></label>
+						</div>
 
-					<div class="extensions__filters-item" aria-checked="false">
-						<input
-							type="radio"
-							name="filter"
-							id="filter-inactive"
-							aria-hidden="true"
-							tabindex="-1"
-						/>
-						<span>Inactive</span>
-						<label for="filter-inactive" role="radio" tabindex="0"></label>
+						<div class="extensions__filters-item" aria-checked="false">
+							<input
+								type="radio"
+								name="filter"
+								id="filter-inactive"
+								aria-hidden="true"
+								tabindex="-1"
+							/>
+							<span>Inactive</span>
+							<label for="filter-inactive" role="radio" tabindex="0"></label>
+						</div>
 					</div>
 				</div>
 
 				<!-- List -->
-				<div class="extensions__list">
+				<div data-component="extensions-list" class="extensions__list">
 					<!-- Cards -->
-					<div class="extensions__card">
+					<div data-component="extensions-card" class="extensions__card">
 						<section class="extensions__card-content">
 							<img src="/assets/images/logo-devlens.svg" alt="card logo" />
 
