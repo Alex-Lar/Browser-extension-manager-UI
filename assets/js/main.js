@@ -6,7 +6,7 @@ import { populateParentElement } from "./utils/fetch.js";
 async function main() {
 	// Init components
 	await populateParentElement(
-		"../../data.json",
+		"data.json",
 		getCardListContainer,
 		renderCards
 	);
