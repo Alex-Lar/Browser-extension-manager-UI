@@ -262,6 +262,7 @@ h3 {
 .extensions__card-control {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   min-width: 100%;
 }
 
